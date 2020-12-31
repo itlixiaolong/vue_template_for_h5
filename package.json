@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "nodemon --exec vue-cli-service serve",
     "build": "vue-cli-service build --mode pro",
-    "build:uat": "vue-cli-service build --mode dev",
+    "build:uat": "vue-cli-service build --mode uat",
     "test:unit": "vue-cli-service test:unit --coverage",
     "lint": "vue-cli-service lint",
     "stylelint": "stylelint src/**/*.less src/**/*.css src/**/*.vue --fix"

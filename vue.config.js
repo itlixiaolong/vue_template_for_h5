@@ -3,15 +3,16 @@ const StyleLintPlugin = require('stylelint-webpack-plugin')
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '././' : '/',
   devServer: {
-    disableHostCheck: true,
-    proxy: {
-      '/': {
-        target: 'http://10.12.24.23',
-        // target: 'http://yapi.rong360.com/mock/720',
-        ws: false,
-        changeOrigin: true
-      }
-    }
+    disableHostCheck: true
+    // historyApiFallback: true  //配置开发环境支持history模式
+    // proxy: {
+    //   '/': {
+    //     target: 'http://10.12.24.23',
+    //     // target: 'http://yapi.rong360.com/mock/720',
+    //     ws: false,
+    //     changeOrigin: true
+    //   }
+    // }
   },
   chainWebpack: config => {
     config.plugin('StyleLintPlugin').use(StyleLintPlugin, [{
